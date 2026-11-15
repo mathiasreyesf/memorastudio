@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.supabase.co https://viacep.com.br; frame-src https://challenges.cloudflare.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+<title>Minha conta — Memora Studio</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#201F20">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js"></script>
+</head>
+<body data-page="conta">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<main id="conteudo">
+  <div class="wrap account">
+    <nav class="side-tabs" role="tablist" aria-orientation="vertical" aria-label="Seções da conta" id="account-tabs">
+      <button type="button" class="tab" role="tab" data-tab="dados" id="t-dados" aria-controls="p-dados">Meus dados</button>
+      <button type="button" class="tab" role="tab" data-tab="endereco" id="t-endereco" aria-controls="p-endereco">Endereço de entrega</button>
+      <button type="button" class="tab" role="tab" data-tab="pedidos" id="t-pedidos" aria-controls="p-pedidos">Meus pedidos</button>
+      <button type="button" class="tab" role="tab" data-tab="seguranca" id="t-seguranca" aria-controls="p-seguranca">Segurança</button>
+    </nav>
+
+    <div>
+      <div class="hello">
+        <h1 id="hello">Minha conta</h1>
+        <button type="button" class="btn btn-outline" id="logout">Sair da conta</button>
+      </div>
+      <div id="recovery" class="banner" hidden>
+        <h2>Defina uma nova senha</h2>
+        <p>Você entrou pelo link de recuperação. Crie a nova senha na aba Segurança.</p>
+      </div>
+
+      <section class="paper" role="tabpanel" id="p-dados" data-panel="dados" aria-labelledby="t-dados" hidden>
+        <h2 style="font-size:1.4rem">Meus dados</h2>
+        <form id="form-dados" novalidate>
+          <div id="dados-msg" role="status" hidden></div>
+          <div class="field"><label for="d-nome">Nome completo</label><div class="input-wrap"><input id="d-nome" type="text" maxlength="120" autocomplete="name"></div></div>
+          <div class="grid-2">
+            <div class="field"><label for="d-email">E-mail</label><div class="input-wrap"><input id="d-email" type="email" readonly></div></div>
+            <div class="field"><label for="d-cpf">CPF</label><div class="input-wrap"><input id="d-cpf" type="text" readonly></div></div>
+          </div>
+          <div class="field"><label for="d-celular">Celular (WhatsApp)</label><div class="input-wrap"><input id="d-celular" type="tel" inputmode="tel" data-mask="phone" autocomplete="tel-national"></div></div>
+          <p class="hint" style="margin-bottom:16px">E-mail e CPF não podem ser alterados por aqui. Se precisar corrigir, fale com a gente pelo WhatsApp.</p>
+          <button class="btn btn-primary" type="submit">Salvar alterações</button>
+        </form>
+      </section>
+
+      <section class="paper" role="tabpanel" id="p-endereco" data-panel="endereco" aria-labelledby="t-endereco" hidden>
+        <h2 style="font-size:1.4rem">Endereço de entrega</h2>
+        <p class="hint" style="margin-bottom:18px">Usado para calcular o frete dos Correios e entregar os seus pedidos.</p>
+        <form id="form-endereco" novalidate>
+          <div id="end-msg" role="status" hidden></div>
+          <div class="grid-addr">
+            <div class="field c2"><label for="a-cep">CEP</label><div class="input-wrap"><input id="a-cep" type="text" inputmode="numeric" data-mask="cep" autocomplete="postal-code"></div></div>
+            <div class="field c4"><label for="a-logradouro">Rua / Avenida</label><div class="input-wrap"><input id="a-logradouro" type="text" maxlength="120"></div></div>
+            <div class="field c2"><label for="a-numero">Número</label><div class="input-wrap"><input id="a-numero" type="text" maxlength="12"></div></div>
+            <div class="field c4"><label for="a-complemento">Complemento</label><div class="input-wrap"><input id="a-complemento" type="text" maxlength="60"></div></div>
+            <div class="field c2"><label for="a-bairro">Bairro</label><div class="input-wrap"><input id="a-bairro" type="text" maxlength="80"></div></div>
+            <div class="field c3 m4"><label for="a-cidade">Cidade</label><div class="input-wrap"><input id="a-cidade" type="text" maxlength="80"></div></div>
+            <div class="field c1"><label for="a-uf">UF</label><div class="input-wrap"><select id="a-uf"></select></div></div>
+          </div>
+          <button class="btn btn-primary" type="submit">Salvar endereço</button>
+        </form>
+      </section>
+
+      <section class="paper" role="tabpanel" id="p-pedidos" data-panel="pedidos" aria-labelledby="t-pedidos" hidden>
+        <h2 style="font-size:1.4rem">Meus pedidos</h2>
+        <div id="orders" aria-live="polite"><p class="empty">Carregando…</p></div>
+      </section>
+
+      <section class="paper" role="tabpanel" id="p-seguranca" data-panel="seguranca" aria-labelledby="t-seguranca" hidden>
+        <h2 style="font-size:1.4rem">Alterar senha</h2>
+        <form id="form-senha" novalidate>
+          <div id="senha-msg" role="status" hidden></div>
+          <div class="field">
+            <label for="c-senha">Nova senha</label>
+            <div class="input-wrap"><input id="c-senha" type="password" autocomplete="new-password" maxlength="72"><button type="button" class="input-btn" data-pw-toggle></button></div>
+            <div id="c-pw-extra"></div>
+          </div>
+          <div class="field">
+            <label for="c-senha2">Confirme a nova senha</label>
+            <div class="input-wrap"><input id="c-senha2" type="password" autocomplete="new-password" maxlength="72"><button type="button" class="input-btn" data-pw-toggle></button></div>
+          </div>
+          <button class="btn btn-primary" type="submit">Atualizar senha</button>
+        </form>
+      </section>
+    </div>
+  </div>
+</main>
+
+<script src="assets/js/core.js" defer></script>
+<script src="assets/js/ui.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/backend.js" defer></script>
+<script src="assets/js/password.js" defer></script>
+<script src="assets/js/layout.js" defer></script>
+<script src="assets/js/conta.js" defer></script>
+</body>
+</html>

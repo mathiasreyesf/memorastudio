@@ -1,0 +1,75 @@
+{
+  "config": { "prazo_producao_dias": 15 },
+  "produtos": [
+    {
+      "id": "escultura",
+      "nome": "Esculturas",
+      "emoji": "🗿",
+      "resumo": "Bustos, miniaturas e peças decorativas",
+      "descricao": "Esculturas em resina de alta definição, feitas a partir da sua referência: pessoa, pet, personagem ou objeto. Você descreve, a gente modela, imprime, lixa e pinta.",
+      "fluxo": "carrinho",
+      "preco": 399.99,
+      "a_partir": true,
+      "pacote": { "peso_g": 600, "c": 20, "l": 20, "a": 20 }
+    },
+    {
+      "id": "funko",
+      "nome": "Funko Pop personalizado",
+      "emoji": "🎁",
+      "resumo": "Mini, padrão ou jumbo, com a sua cara",
+      "descricao": "Figura no estilo Funko Pop com o seu rosto, seu pet ou seu personagem favorito. Escolha o tamanho: mini (ideal para chaveiro), padrão (igual ao original) ou jumbo.",
+      "fluxo": "carrinho",
+      "a_partir": false,
+      "variantes": [
+        { "id": "mini", "nome": "Mini (para chaveiro)", "emoji": "🧸", "preco": 299.99, "pacote": { "peso_g": 200, "c": 16, "l": 16, "a": 12 } },
+        { "id": "padrao", "nome": "Padrão (~10 cm)", "emoji": "🎁", "preco": 599.99, "pacote": { "peso_g": 500, "c": 20, "l": 20, "a": 20 } },
+        { "id": "jumbo", "nome": "Jumbo", "emoji": "🦸", "preco": 1299.99, "pacote": { "peso_g": 2500, "c": 35, "l": 30, "a": 35 } }
+      ]
+    },
+    {
+      "id": "chaveiro",
+      "nome": "Chaveiros",
+      "emoji": "🔑",
+      "resumo": "Lote mínimo de 10 unidades",
+      "descricao": "Chaveiros personalizados com iniciais, logos ou mascotes. O pedido mínimo é de 10 unidades; cada unidade acima disso é cobrada à parte.",
+      "fluxo": "carrinho",
+      "preco": 199.99,
+      "a_partir": true,
+      "qtd_min": 10,
+      "preco_unidade_extra": 19.99,
+      "pacote": { "peso_g": 300, "c": 20, "l": 15, "a": 8 }
+    },
+    {
+      "id": "porta-chaves",
+      "nome": "Porta-chaves",
+      "emoji": "🏠",
+      "resumo": "Para pendurar na parede, do seu jeito",
+      "descricao": "Porta-chaves de parede em resina, com o formato, as cores e os detalhes que você quiser.",
+      "fluxo": "carrinho",
+      "preco": 249.99,
+      "a_partir": true,
+      "pacote": { "peso_g": 400, "c": 25, "l": 15, "a": 10 }
+    },
+    {
+      "id": "moldura",
+      "nome": "Moldura de quadro",
+      "emoji": "🖼️",
+      "resumo": "Molduras e relevos com textura real",
+      "descricao": "Molduras e quadros em relevo 3D, com profundidade e textura, feitos para a sua foto ou ilustração.",
+      "fluxo": "carrinho",
+      "preco": 199.99,
+      "a_partir": true,
+      "pacote": { "peso_g": 700, "c": 35, "l": 30, "a": 8 }
+    },
+    {
+      "id": "outros",
+      "nome": "Outros pedidos personalizados",
+      "emoji": "✨",
+      "resumo": "Qualquer ideia em resina",
+      "descricao": "Tem uma ideia que não está na lista? Conte pelo WhatsApp e a gente combina os detalhes e o valor final com você.",
+      "fluxo": "whatsapp",
+      "preco": 299.99,
+      "a_partir": true
+    }
+  ]
+}

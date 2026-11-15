@@ -1,0 +1,4 @@
+# O webhook do Mercado Pago não envia login do Supabase; a segurança dele vem de
+# reconsultar o pagamento na API do Mercado Pago com o seu token (veja mp-webhook).
+[functions.mp-webhook]
+verify_jwt = false

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.supabase.co https://viacep.com.br; frame-src https://challenges.cloudflare.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+<title>Entrar ou criar conta — Memora Studio</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#201F20">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js"></script>
+</head>
+<body data-page="login">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<main id="conteudo">
+  <div class="wrap auth">
+    <aside class="auth-aside">
+      <img class="auth-art" src="assets/img/logo-mark.png" alt="" width="240" height="128">
+      <h1>Sua conta Memora</h1>
+      <p class="lead">Acompanhe seus pedidos e guarde o endereço de entrega para comprar mais rápido.</p>
+      <ul>
+        <li><span data-icon="lock"></span><span>Sua senha é protegida e nunca fica visível para nós.</span></li>
+        <li><span data-icon="truck"></span><span>O endereço do cadastro é usado para calcular o frete e entregar pelos Correios.</span></li>
+        <li><span data-icon="phone"></span><span>Seu celular serve para falarmos sobre o pedido pelo WhatsApp.</span></li>
+      </ul>
+    </aside>
+
+    <section class="paper" aria-label="Acesso à conta">
+      <div class="tabs" role="tablist" aria-label="Acesso" id="auth-tabs">
+        <button type="button" class="tab" role="tab" id="tab-entrar" data-tab="entrar" aria-controls="panel-entrar">Entrar</button>
+        <button type="button" class="tab" role="tab" id="tab-cadastro" data-tab="cadastro" aria-controls="panel-cadastro">Criar conta</button>
+        <span class="tab-ind" aria-hidden="true"></span>
+      </div>
+
+      <!-- ENTRAR -->
+      <div role="tabpanel" id="panel-entrar" data-panel="entrar" aria-labelledby="tab-entrar">
+        <form id="form-login" novalidate>
+          <div id="login-error" class="form-error" role="alert" hidden></div>
+          <div class="field">
+            <label for="l-email">E-mail</label>
+            <div class="input-wrap"><input id="l-email" type="email" autocomplete="email" maxlength="254" required></div>
+          </div>
+          <div class="field">
+            <label for="l-senha">Senha</label>
+            <div class="input-wrap"><input id="l-senha" type="password" autocomplete="current-password" maxlength="72" required>
+              <button type="button" class="input-btn" data-pw-toggle></button></div>
+          </div>
+          <div id="l-captcha"></div>
+          <button class="btn btn-primary btn-block" type="submit">Entrar</button>
+          <p style="text-align:center;margin:16px 0 0"><button type="button" class="link-btn" id="show-reset">Esqueci minha senha</button></p>
+        </form>
+
+        <form id="form-reset" novalidate hidden>
+          <h2 style="font-size:1.3rem">Recuperar senha</h2>
+          <p class="hint" style="margin-bottom:16px">Informe o e-mail da conta. Se ele existir, enviaremos um link para criar uma nova senha.</p>
+          <div id="reset-msg" role="status" hidden></div>
+          <div class="field">
+            <label for="r-email">E-mail</label>
+            <div class="input-wrap"><input id="r-email" type="email" autocomplete="email" maxlength="254" required></div>
+          </div>
+          <div id="r-captcha"></div>
+          <button class="btn btn-primary btn-block" type="submit">Enviar link</button>
+          <p style="text-align:center;margin:16px 0 0"><button type="button" class="link-btn" id="hide-reset">Voltar para o login</button></p>
+        </form>
+      </div>
+
+      <!-- CADASTRO -->
+      <div role="tabpanel" id="panel-cadastro" data-panel="cadastro" aria-labelledby="tab-cadastro" hidden>
+        <form id="form-signup" novalidate>
+          <div id="signup-error" class="form-error" role="alert" hidden></div>
+
+          <fieldset class="fieldset">
+            <legend>Seus dados</legend>
+            <div class="field">
+              <label for="s-nome">Nome completo</label>
+              <div class="input-wrap"><input id="s-nome" type="text" autocomplete="name" maxlength="120" required></div>
+            </div>
+            <div class="field">
+              <label for="s-email">E-mail</label>
+              <div class="input-wrap"><input id="s-email" type="email" autocomplete="email" maxlength="254" required></div>
+            </div>
+            <div class="grid-2">
+              <div class="field">
+                <label for="s-celular">Celular (WhatsApp)</label>
+                <div class="input-wrap"><input id="s-celular" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="(11) 90000-0000" data-mask="phone" required></div>
+              </div>
+              <div class="field">
+                <label for="s-cpf">CPF</label>
+                <div class="input-wrap"><input id="s-cpf" type="text" inputmode="numeric" autocomplete="off" placeholder="000.000.000-00" data-mask="cpf" required></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldset">
+            <legend>Endereço de entrega</legend>
+            <div class="grid-addr">
+              <div class="field c2"><label for="s-cep">CEP</label><div class="input-wrap"><input id="s-cep" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" data-mask="cep" required></div></div>
+              <div class="field c4"><label for="s-logradouro">Rua / Avenida</label><div class="input-wrap"><input id="s-logradouro" type="text" autocomplete="address-line1" maxlength="120" required></div></div>
+              <div class="field c2"><label for="s-numero">Número</label><div class="input-wrap"><input id="s-numero" type="text" maxlength="12" autocomplete="off" required></div></div>
+              <div class="field c4"><label for="s-complemento">Complemento <span style="font-weight:400;color:var(--paper-muted)">(opcional)</span></label><div class="input-wrap"><input id="s-complemento" type="text" maxlength="60" autocomplete="address-line2"></div></div>
+              <div class="field c2"><label for="s-bairro">Bairro</label><div class="input-wrap"><input id="s-bairro" type="text" maxlength="80" autocomplete="address-level3" required></div></div>
+              <div class="field c3 m4"><label for="s-cidade">Cidade</label><div class="input-wrap"><input id="s-cidade" type="text" maxlength="80" autocomplete="address-level2" required></div></div>
+              <div class="field c1"><label for="s-uf">UF</label><div class="input-wrap"><select id="s-uf" autocomplete="address-level1" required></select></div></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="fieldset">
+            <legend>Crie uma senha</legend>
+            <div class="field">
+              <label for="s-senha">Senha</label>
+              <div class="input-wrap"><input id="s-senha" type="password" autocomplete="new-password" maxlength="72" required>
+                <button type="button" class="input-btn" data-pw-toggle></button></div>
+              <div id="s-pw-extra"></div>
+            </div>
+            <div class="field">
+              <label for="s-senha2">Confirme a senha</label>
+              <div class="input-wrap"><input id="s-senha2" type="password" autocomplete="new-password" maxlength="72" required>
+                <button type="button" class="input-btn" data-pw-toggle></button></div>
+            </div>
+          </fieldset>
+
+          <div id="s-captcha"></div>
+
+          <div class="field" style="margin-bottom:0">
+            <label class="check" for="s-aceite">
+              <input id="s-aceite" type="checkbox">
+              <span>Concordo em fornecer meus dados (nome, CPF, celular e endereço) para processar pedidos e entregas, e que eles sejam guardados com segurança.</span>
+            </label>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Criar minha conta</button>
+        </form>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script src="assets/js/core.js" defer></script>
+<script src="assets/js/ui.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/backend.js" defer></script>
+<script src="assets/js/captcha.js" defer></script>
+<script src="assets/js/password.js" defer></script>
+<script src="assets/js/layout.js" defer></script>
+<script src="assets/js/login.js" defer></script>
+</body>
+</html>

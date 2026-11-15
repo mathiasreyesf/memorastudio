@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.supabase.co https://viacep.com.br; frame-src https://challenges.cloudflare.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+<title>Produtos — Memora Studio</title>
+<meta name="description" content="Esculturas, Funko Pop, chaveiros, porta-chaves, molduras e pedidos personalizados em resina. Veja os valores e monte seu pedido.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#201F20">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js"></script>
+</head>
+<body data-page="produtos">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<main id="conteudo">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Produtos</h1>
+      <p class="lead">Escolha um produto, descreva como você quer e adicione ao carrinho. O frete dos Correios é calculado no pagamento, pelo seu endereço.</p>
+    </div>
+    <div class="p-grid" id="grid" aria-live="polite" style="padding:28px 0 8px">
+      <div class="p-skel"></div><div class="p-skel"></div><div class="p-skel"></div>
+    </div>
+  </div>
+</main>
+
+<dialog class="pd" id="pd" aria-labelledby="pd-title">
+  <button type="button" class="icon-btn pd-close" id="pd-close" aria-label="Fechar"></button>
+  <div class="pd-stage"><span class="pd-emoji" id="pd-emoji" aria-hidden="true"></span></div>
+  <div class="pd-body paper" id="pd-body"></div>
+</dialog>
+
+<script src="assets/js/core.js" defer></script>
+<script src="assets/js/ui.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/backend.js" defer></script>
+<script src="assets/js/layout.js" defer></script>
+<script src="assets/js/cards.js" defer></script>
+<script src="assets/js/produtos.js" defer></script>
+</body>
+</html>

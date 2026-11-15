@@ -2,292 +2,117 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Memora Studio — Pré-orçamento de impressão 3D em resina</title>
-<meta name="description" content="Funko Pops, esculturas, quadros e chaveiros personalizados, impressos em resina. Monte seu pré-orçamento na hora com a Memora Studio.">
-<link rel="icon" type="image/png" href="logo-mark.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.supabase.co https://viacep.com.br; frame-src https://challenges.cloudflare.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+<title>Memora Studio — Impressão 3D em resina sob encomenda</title>
+<meta name="description" content="Funko Pops, esculturas, chaveiros, porta-chaves e molduras personalizados em resina. Escolha, descreva e receba em casa pelos Correios.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 <meta name="theme-color" content="#201F20">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js"></script>
 </head>
-<body>
+<body data-page="home">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<a class="skip-link" href="#calculadora">Pular para a calculadora</a>
-
-<header class="site-header" id="topo">
-  <div class="wrap header-inner">
-    <a class="logo" href="#topo">
-      <img class="logo-mark" src="logo-mark.png" alt="" aria-hidden="true">
-      Memora <span class="logo-accent">Studio</span>
-    </a>
-    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
-      <a href="#produtos">Produtos</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#calculadora">Calculadora</a>
-      <a href="#pedido">Enviar pedido</a>
-    </nav>
-    <a class="btn btn-ghost nav-cta" href="#calculadora">Fazer orçamento</a>
-    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-
-<main>
-
-  <!-- HERO -->
+<main id="conteudo">
   <section class="hero">
     <div class="wrap hero-inner">
-      <p class="eyebrow">Impressão 3D em resina · sob encomenda</p>
-      <h1 class="hero-title" aria-label="Sua ideia, impressa em camadas.">
-        <span class="layer-stack" data-text="Sua ideia,">Sua ideia,</span>
-        <span class="layer-stack" data-text="impressa em">impressa em</span>
-        <span class="layer-stack accent" data-text="camadas.">camadas.</span>
-      </h1>
-      <p class="hero-sub">
-        Funko Pops, esculturas, quadros e chaveiros — personalizados ou prontos,
-        impressos em resina de alta definição. Descreva o que você quer,
-        mande fotos de referência e veja o pré-orçamento na hora.
-      </p>
-      <div class="hero-actions">
-        <a href="#calculadora" class="btn btn-primary">Calcular meu orçamento</a>
-        <a href="#produtos" class="btn btn-outline">Ver o que produzimos</a>
+      <div>
+        <h1 class="hero-title" aria-label="Sua ideia, impressa em camadas.">
+          <span class="line l1" aria-hidden="true">Sua ideia,</span>
+          <span class="line l2" aria-hidden="true">impressa em</span>
+          <span class="line l3" aria-hidden="true">camadas.</span>
+        </h1>
+        <p class="hero-sub">Funko Pops, esculturas, chaveiros, porta-chaves e molduras em resina de alta definição. Escolha, descreva do seu jeito e receba em casa pelos Correios.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="produtos.html">Ver produtos</a>
+          <a class="btn btn-outline" data-wa="Olá! Quero fazer um pedido personalizado na Memora Studio.">Pedir algo diferente</a>
+        </div>
       </div>
-      <p class="hero-note">Pedido mínimo de <strong>R$ 150</strong> · valores variam pelo gasto de material</p>
+      <div class="hero-art" aria-hidden="true">
+        <img src="assets/img/logo-mark.png" alt="" width="460" height="245" id="hero-blob">
+      </div>
     </div>
   </section>
 
-  <!-- PRODUTOS -->
+  <div class="band" aria-hidden="true">
+    <div class="marquee">
+      <ul><li>Funko Pop</li><li>Esculturas</li><li>Chaveiros</li><li>Porta-chaves</li><li>Molduras</li><li>Pedidos personalizados</li></ul>
+      <ul><li>Funko Pop</li><li>Esculturas</li><li>Chaveiros</li><li>Porta-chaves</li><li>Molduras</li><li>Pedidos personalizados</li></ul>
+    </div>
+    <svg class="drips" viewBox="0 0 1200 46" preserveAspectRatio="none" focusable="false">
+      <rect x="0" y="0" width="1200" height="8"/>
+      <rect class="d" x="70" y="0" width="14" height="30" rx="7"/>
+      <rect class="d" x="190" y="0" width="18" height="44" rx="9"/>
+      <rect class="d" x="330" y="0" width="12" height="24" rx="6"/>
+      <rect class="d" x="470" y="0" width="16" height="38" rx="8"/>
+      <rect class="d" x="610" y="0" width="12" height="28" rx="6"/>
+      <rect class="d" x="740" y="0" width="18" height="42" rx="9"/>
+      <rect class="d" x="880" y="0" width="14" height="26" rx="7"/>
+      <rect class="d" x="1010" y="0" width="16" height="40" rx="8"/>
+      <rect class="d" x="1130" y="0" width="12" height="28" rx="6"/>
+    </svg>
+  </div>
+
   <section class="section" id="produtos">
     <div class="wrap">
-      <h2 class="section-title">O que a gente imprime</h2>
-      <p class="section-lead">Qualquer coisa em resina — do seu jeito ou do nosso catálogo. Estes são os pedidos mais comuns:</p>
-
-      <div class="product-grid">
-        <article class="product-card">
-          <div class="product-icon" aria-hidden="true">🎁</div>
-          <h3>Funko Pop personalizado</h3>
-          <p>No mesmo tamanho médio dos originais (~10 cm). Sua cara, seu personagem, seu pet.</p>
-          <span class="product-price">a partir de R$ 175</span>
-        </article>
-        <article class="product-card">
-          <div class="product-icon" aria-hidden="true">🗿</div>
-          <h3>Esculturas</h3>
-          <p>Bustos, miniaturas, peças decorativas — de pequenas a grandes, em qualquer nível de detalhe.</p>
-          <span class="product-price">a partir de R$ 150</span>
-        </article>
-        <article class="product-card">
-          <div class="product-icon" aria-hidden="true">🖼️</div>
-          <h3>Quadros e relevos</h3>
-          <p>Ilustrações e fotos transformadas em relevo 3D, com profundidade e textura real.</p>
-          <span class="product-price">a partir de R$ 150</span>
-        </article>
-        <article class="product-card">
-          <div class="product-icon" aria-hidden="true">🔑</div>
-          <h3>Porta-chaves e chaveiros</h3>
-          <p>Iniciais, logos, mascotes — ótimo pra pedir em grupo com amigos ou pra eventos.</p>
-          <span class="product-price">a partir de R$ 150*</span>
-        </article>
+      <div class="section-head" data-reveal>
+        <h2 class="section-title">O que a gente faz</h2>
+        <p class="lead">Tudo feito sob encomenda, do seu jeito. Toque em um produto para ver as opções e montar o pedido.</p>
       </div>
-      <p class="product-footnote">*Peças pequenas isoladas entram no valor mínimo do pedido — vale juntar mais de uma no mesmo pedido.</p>
+      <div class="p-grid" id="home-grid" aria-live="polite">
+        <div class="p-skel"></div><div class="p-skel"></div><div class="p-skel"></div>
+      </div>
     </div>
   </section>
 
-  <!-- COMO FUNCIONA -->
-  <section class="section section-dark" id="como-funciona">
+  <section class="section alt" id="como-funciona">
     <div class="wrap">
-      <h2 class="section-title">Como funciona</h2>
+      <div class="section-head" data-reveal><h2 class="section-title">Como funciona</h2></div>
       <ol class="steps">
-        <li class="step">
-          <span class="step-n">01</span>
-          <h3>Descreva sua ideia</h3>
-          <p>Conte o que você quer, tamanho aproximado e pra que vai servir.</p>
-        </li>
-        <li class="step">
-          <span class="step-n">02</span>
-          <h3>Envie referências</h3>
-          <p>Fotos, vídeos ou até o arquivo 3D pronto (.stl, .obj, .3mf) — se já tiver um.</p>
-        </li>
-        <li class="step">
-          <span class="step-n">03</span>
-          <h3>Veja o pré-orçamento</h3>
-          <p>Use a calculadora abaixo pra ter uma estimativa antes mesmo de falar com a gente.</p>
-        </li>
-        <li class="step">
-          <span class="step-n">04</span>
-          <h3>Aprovamos e produzimos</h3>
-          <p>Confirmamos o valor final, você aprova, e a peça entra na fila de impressão.</p>
-        </li>
+        <li data-reveal><h3>Escolha o produto</h3><p>Veja as opções, os tamanhos e os valores na página de produtos.</p></li>
+        <li data-reveal style="--i:1"><h3>Conte sua ideia</h3><p>Descreva o que você quer no pedido e mande fotos de referência pelo WhatsApp.</p></li>
+        <li data-reveal style="--i:2"><h3>Pague pela internet</h3><p>Pix ou cartão, em ambiente seguro. O frete dos Correios é calculado pelo seu CEP.</p></li>
+        <li data-reveal style="--i:3"><h3>Receba em casa</h3><p>Produzimos em <span data-prazo>15</span> dias, embalamos com cuidado e enviamos pelos Correios para o seu endereço.</p></li>
       </ol>
     </div>
   </section>
 
-  <!-- CALCULADORA -->
-  <section class="section" id="calculadora">
+  <section class="section">
     <div class="wrap">
-      <h2 class="section-title">Calculadora de pré-orçamento</h2>
-      <p class="section-lead">
-        Monte sua peça e veja uma estimativa na hora. É um <strong>pré-orçamento</strong>:
-        o valor final é confirmado depois de analisarmos sua referência ou arquivo 3D.
-      </p>
-
-      <div class="calc-grid">
-
-        <!-- Formulário de item -->
-        <div class="calc-form panel">
-          <div class="field">
-            <label for="categoria">O que você quer imprimir?</label>
-            <select id="categoria"></select>
-          </div>
-
-          <div class="field" id="campo-tamanho">
-            <label for="tamanho">Tamanho</label>
-            <select id="tamanho"></select>
-          </div>
-
-          <div class="field field-inline" id="campo-peso-manual">
-            <label class="checkbox-label">
-              <input type="checkbox" id="peso-manual-toggle">
-              Já sei o peso exato (tirei do fatiador), em gramas
-            </label>
-            <input type="number" id="peso-manual" min="1" placeholder="ex: 180" disabled>
-          </div>
-
-          <div class="field" id="campo-complexidade">
-            <label for="complexidade">Nível de acabamento</label>
-            <select id="complexidade">
-              <option value="3.5">Simples — sem pintura ou cor única</option>
-              <option value="4" selected>Médio — pintura básica, poucos detalhes</option>
-              <option value="5">Complexo — pintura detalhada, várias cores/peças</option>
-            </select>
-          </div>
-
-          <div class="field field-inline">
-            <label class="checkbox-label">
-              <input type="checkbox" id="resina-especial">
-              Resina especial (translúcida, flexível, alta resistência) +15%
-            </label>
-          </div>
-
-          <div class="field" id="campo-qtd">
-            <label for="quantidade">Quantidade</label>
-            <input type="number" id="quantidade" value="1" min="1" max="50">
-          </div>
-
-          <p class="estimate-readout" id="estimate-readout"></p>
-
-          <button class="btn btn-primary btn-block" id="add-item-btn" type="button">Adicionar ao orçamento</button>
+      <div class="promo" data-reveal>
+        <div>
+          <span class="handle"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>@memorastudio.3d</span>
+          <h2>Veja nossos trabalhos de perto</h2>
+          <p>Bastidores, peças prontas e novidades saem primeiro no Instagram. Vem seguir a Memora.</p>
         </div>
-
-        <!-- Carrinho + vat -->
-        <div class="calc-result panel">
-          <div class="vat-wrap" aria-hidden="true">
-            <div class="vat">
-              <div class="vat-fill" id="vat-fill">
-                <div class="vat-wave"></div>
-              </div>
-            </div>
-            <div class="vat-label">
-              <span id="vat-status-text">Adicione itens pra começar</span>
-            </div>
-          </div>
-
-          <ul class="cart-list" id="cart-list">
-            <li class="cart-empty" id="cart-empty">Seu orçamento está vazio.</li>
-          </ul>
-
-          <div class="cart-total">
-            <div class="cart-total-row">
-              <span>Subtotal por material/acabamento</span>
-              <span id="cart-subtotal">R$ 0</span>
-            </div>
-            <div class="cart-total-row" id="minimo-row" hidden>
-              <span>Ajuste de pedido mínimo</span>
-              <span id="cart-minimo">+ R$ 0</span>
-            </div>
-            <div class="cart-total-row cart-total-final">
-              <span>Total estimado</span>
-              <span id="cart-total">R$ 0</span>
-            </div>
-          </div>
-
-          <a href="#pedido" class="btn btn-outline btn-block">Continuar pra enviar o pedido</a>
+        <div>
+          <a class="btn btn-dark" href="https://www.instagram.com/memorastudio.3d/" target="_blank" rel="noopener noreferrer">Abrir o Instagram</a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- PEDIDO -->
-  <section class="section section-dark" id="pedido">
-    <div class="wrap">
-      <h2 class="section-title">Enviar pedido</h2>
-      <p class="section-lead">
-        Preencha seus dados, descreva a peça e anexe fotos, vídeos ou o arquivo 3D.
-        Ao enviar, abrimos o WhatsApp com o resumo do seu orçamento — é só anexar
-        os arquivos direto na conversa.
-      </p>
-
-      <form class="order-form panel" id="order-form">
-        <div class="form-row">
-          <div class="field">
-            <label for="nome">Seu nome</label>
-            <input type="text" id="nome" required placeholder="Como podemos te chamar?">
-          </div>
-          <div class="field">
-            <label for="whatsapp">WhatsApp</label>
-            <input type="tel" id="whatsapp" required placeholder="(00) 00000-0000">
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="descricao">Descreva o que você quer</label>
-          <textarea id="descricao" rows="4" placeholder="Ex: Funko Pop do meu cachorro, sentado, com a coleira azul que ele usa..." required></textarea>
-        </div>
-
-        <div class="field">
-          <label for="arquivos">Fotos, vídeos ou arquivo 3D de referência</label>
-          <input type="file" id="arquivos" multiple accept="image/*,video/*,.stl,.obj,.3mf,.zip">
-          <p class="field-hint" id="arquivos-hint">Nenhum arquivo selecionado ainda.</p>
-        </div>
-
-        <div class="field" id="resumo-orcamento" hidden>
-          <label>Resumo do seu pré-orçamento</label>
-          <div class="order-summary-box" id="order-summary-box"></div>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-block">Enviar pedido pelo WhatsApp</button>
-        <p class="form-disclaimer">
-          Os arquivos selecionados não são enviados automaticamente por este site —
-          o WhatsApp vai abrir com o texto do pedido pronto, e você anexa os arquivos
-          direto na conversa antes de enviar.
-        </p>
-      </form>
+  <section class="section alt">
+    <div class="wrap cta-end" data-reveal>
+      <h2 class="section-title">Tem uma ideia que não está na lista?</h2>
+      <p class="lead">Pedidos personalizados começam em R$ 299,99 e são combinados direto pelo WhatsApp.</p>
+      <a class="btn btn-primary" data-wa="Olá! Tenho uma ideia de peça personalizada.">Falar no WhatsApp</a>
     </div>
   </section>
-
 </main>
 
-<footer class="site-footer">
-  <div class="wrap footer-inner">
-    <div>
-      <p class="logo footer-logo">
-        <img class="logo-mark" src="logo-mark.png" alt="" aria-hidden="true">
-        Memora <span class="logo-accent">Studio</span>
-      </p>
-      <p class="footer-tagline">Impressão 3D em resina, sob encomenda.</p>
-    </div>
-    <div class="footer-meta">
-      <p>Pré-orçamentos gerados aqui são estimativas. O valor final é confirmado após
-      análise da referência ou do arquivo 3D enviado.</p>
-      <p>© <span id="ano"></span> Memora Studio</p>
-    </div>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+<script src="assets/js/core.js" defer></script>
+<script src="assets/js/ui.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/backend.js" defer></script>
+<script src="assets/js/layout.js" defer></script>
+<script src="assets/js/cards.js" defer></script>
+<script src="assets/js/home.js" defer></script>
 </body>
 </html>

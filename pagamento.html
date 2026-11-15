@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://*.supabase.co https://viacep.com.br; frame-src https://challenges.cloudflare.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+<title>Pagamento — Memora Studio</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#201F20">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..800,0..100&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/config.js"></script>
+</head>
+<body data-page="pagamento">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<main id="conteudo">
+  <div class="wrap">
+    <div class="page-head"><h1>Finalizar pedido</h1></div>
+    <div id="retorno" aria-live="polite"></div>
+
+    <div class="empty-dark" id="empty" hidden>
+      <span class="big-emoji" aria-hidden="true">🫧</span>
+      <p>Seu carrinho está vazio.</p>
+      <a class="btn btn-primary" href="produtos.html">Ver produtos</a>
+    </div>
+
+    <div class="checkout" id="checkout" hidden>
+      <div>
+        <section class="paper step-card" id="step-entrega" aria-labelledby="h-entrega">
+          <h2 id="h-entrega"><span class="step-n">1</span>Entrega</h2>
+          <p class="hint" id="recipient" style="margin-bottom:16px"></p>
+          <form id="form-entrega" novalidate>
+            <div class="grid-addr">
+              <div class="field c2"><label for="p-cep">CEP</label><div class="input-wrap"><input id="p-cep" type="text" inputmode="numeric" data-mask="cep" autocomplete="postal-code"></div></div>
+              <div class="field c4"><label for="p-logradouro">Rua / Avenida</label><div class="input-wrap"><input id="p-logradouro" type="text" maxlength="120"></div></div>
+              <div class="field c2"><label for="p-numero">Número</label><div class="input-wrap"><input id="p-numero" type="text" maxlength="12"></div></div>
+              <div class="field c4"><label for="p-complemento">Complemento</label><div class="input-wrap"><input id="p-complemento" type="text" maxlength="60"></div></div>
+              <div class="field c2"><label for="p-bairro">Bairro</label><div class="input-wrap"><input id="p-bairro" type="text" maxlength="80"></div></div>
+              <div class="field c3 m4"><label for="p-cidade">Cidade</label><div class="input-wrap"><input id="p-cidade" type="text" maxlength="80"></div></div>
+              <div class="field c1"><label for="p-uf">UF</label><div class="input-wrap"><select id="p-uf"></select></div></div>
+            </div>
+            <button class="btn btn-primary" type="submit">Calcular frete</button>
+          </form>
+        </section>
+
+        <section class="paper step-card locked" id="step-frete" aria-labelledby="h-frete">
+          <h2 id="h-frete"><span class="step-n">2</span>Frete pelos Correios</h2>
+          <div id="frete-msg" role="status"><p class="hint">Preencha o endereço acima para ver as opções de envio.</p></div>
+          <fieldset class="opts" id="frete-opts" hidden><legend class="sr">Opções de envio</legend></fieldset>
+        </section>
+
+        <section class="paper step-card locked" id="step-pag" aria-labelledby="h-pag">
+          <h2 id="h-pag"><span class="step-n">3</span>Pagamento</h2>
+          <div id="pay-error" class="form-error" role="alert" hidden></div>
+          <p class="pay-note" id="pay-note"></p>
+          <button class="btn btn-primary btn-block" type="button" id="pay-btn" disabled>Pagar</button>
+        </section>
+      </div>
+
+      <aside class="paper summary" aria-labelledby="h-sum">
+        <h2 id="h-sum">Resumo</h2>
+        <div id="sum-items"></div>
+        <div class="sum-row"><span>Produtos</span><span id="sum-sub"></span></div>
+        <div class="sum-row"><span>Frete</span><span id="sum-frete">a calcular</span></div>
+        <div class="sum-row sum-total"><span>Total</span><span id="sum-total"></span></div>
+        <p class="hint">Prazo de produção: <span data-prazo>15</span> dias, mais a entrega dos Correios, que conta a partir do envio.</p>
+        <p class="hint">Você escolhe Pix ou cartão na tela segura de pagamento.</p>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<script src="assets/js/core.js" defer></script>
+<script src="assets/js/ui.js" defer></script>
+<script src="assets/js/cart.js" defer></script>
+<script src="assets/js/backend.js" defer></script>
+<script src="assets/js/layout.js" defer></script>
+<script src="assets/js/pagamento.js" defer></script>
+</body>
+</html>
